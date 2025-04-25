@@ -91,9 +91,9 @@ func main() {
 	router.Mount("/v1", v1Router)
 
 	srv := &http.Server{
-	    Addr:              ":" + port,
-	    Handler:           router,
-	    ReadHeaderTimeout: 10 * time.Second, // Add this line
+		Addr:              ":" + port,
+		Handler:           router,
+		ReadHeaderTimeout: 10 * time.Second, // Add this line
 	}
 
 	log.Printf("Serving on port: %s\n", port)
